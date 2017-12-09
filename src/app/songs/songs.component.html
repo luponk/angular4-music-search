@@ -1,0 +1,9 @@
+<form (submit)="addSong($event)">
+  <input type="text" name="newSong" [(ngModel)]="newSong">
+  <button>Save</button>
+</form>
+<ul>
+  <li *ngFor="let name of songs">
+    {{name.title}}
+  </li>
+</ul>

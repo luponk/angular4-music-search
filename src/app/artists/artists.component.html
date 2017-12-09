@@ -1,0 +1,16 @@
+<form (submit)="searchArtists()" style="text-align:center">
+  <input type="text" name="artista" placeholder="Nombre del artista..."
+  [(ngModel)]="artistName">
+  <button>
+    <span class="glyphicon glyphicon-search"></span>
+    Buscar</button>
+</form>
+<ul>
+  <li *ngFor="let artist of artists">
+    <a routerLink="/artists/{{artist.name}}/albums" >
+
+      <img src="{{ artist.img }}" alt="artist.name" height="42" width="42">
+      <span>{{ artist.name }}</span>
+    </a>
+  </li>
+</ul>

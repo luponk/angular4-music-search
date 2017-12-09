@@ -1,0 +1,10 @@
+<h1 style="text-align:center">Artist {{artistName}}</h1>
+<ul>
+  <li *ngFor="let album of albums">
+    <a routerLink="/artists/{{artistName}}/albums/{{ album.name }}">
+      <img src="{{ album.img }}" alt="album.name" height="42" width="42">
+
+      <span>{{ album.name }}</span>
+    </a>
+  </li>
+</ul>

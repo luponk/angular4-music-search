@@ -1,0 +1,14 @@
+<h1 style="text-align:center">Album {{album.name}}</h1>
+
+<a class="goBack" routerLink="/artists/{{artistName}}/album">{{ artistName }}</a>
+
+<img class="albumDetail" src="{{ album.img }}" alt="{{album.name}}" >
+
+<h3 [innerHTML]="album.summary"></h3>
+<p [innerHTML]="album.description"></p>
+<ul>
+  <li *ngFor="let song of album.songs">
+    {{ song.name }},
+    {{ song.duration }},
+  </li>
+</ul>

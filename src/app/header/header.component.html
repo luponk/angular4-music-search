@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <span  style="margin: 0 !important;" class="glyphicon glyphicon-music"></span>
+      </a>
+      <span class="navbar-brand">Busqueda Musical</span>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Demo Inicial</a></li>
+      <li class="dropdown" dropdown> <!-- {1} -->
+        <a dropdownToggle role="button"> <!-- {2} -->
+          Buscar por <span class="caret"></span></a>
+        <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
+          <li><a routerLink="/artists/">Artista</a></li>
+          <li><a href="#">Cancion</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
